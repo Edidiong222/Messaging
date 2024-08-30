@@ -1,0 +1,249 @@
+/* Chat.css */
+body{
+  width: 98vw;
+  font-family: Monne;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  background: url(./assets/wall.jpg);
+  background-size: cover;
+}
+@font-face {
+  font-family: Monne;
+  src: url(./assets/Montserrat/Montserrat-VariableFont_wght.ttf);
+}
+@font-face {
+  font-family: Roboto_Slab;
+  src: url(./assets/Roboto_Slab/Roboto_Slab/RobotoSlab-VariableFont_wght.ttf);
+}
+.App{
+  border: 1px solid white;
+  margin-top: 50%;
+  color: wheat;
+  width: 40vw;
+  display: flex;
+  justify-content: space-between;
+}
+.App button{
+  background: #357abd;
+  color: white;
+  font-family: Monne;
+  cursor: pointer;
+}
+.chat-container {
+  display: flex;
+  flex-direction: column;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f4f4f9;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.chat-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: Roboto_Slab;
+  margin-bottom: 10px;
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+}
+
+.user-profile {
+  display: flex;
+  align-items: center;
+}
+
+.user-profile-img, .sender-profile-img {
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+}
+
+.no-profile-picture {
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ddd;
+  margin-right: 10px;
+}
+
+.sign-out-button {
+  background-color: #e94e77;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 8px 6px;
+  margin: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.sign-out-button:hover {
+  background-color: #d93b5e;
+}
+
+.chat-form {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.chat-input-field {
+  flex: 1;
+  padding: 10px;
+  border: 2px solid #4a90e2;
+  border-radius: 25px;
+  outline: none;
+  font-size: 1rem;
+  color: #333;
+  transition: border-color 0.3s;
+}
+form{
+  padding: 10px;
+}
+
+.chat-input-field:focus {
+  border-color: #357abd;
+}
+
+.send-button {
+  background-color: #4a90e2;
+  color: #fff;
+  border: none;
+  border-radius: 50px;
+  width: 90px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 10px;
+  margin-left: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.send-button:hover {
+  background-color: #357abd;
+}
+
+.send-button:active {
+  background-color: #003c71;
+}
+
+.messages {
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+.message-container {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+
+.user-message-container {
+  align-items: flex-end;
+}
+
+.other-message-container {
+  align-items: flex-start;
+}
+
+.message-info {
+  display: flex;
+  align-items: center;
+}
+
+.sender-name {
+  font-weight: bold;
+  font-size: 12px;
+}
+
+.message {
+  padding: 5px 10px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 60%;
+  border: 1px solid #ddd;
+}
+
+.user-message {
+  background-color: rgb(0, 230, 0);
+  border: 1px solid #b6d3b0;
+  color: white;
+  align-self: flex-end;
+}
+
+.other-message {
+  background-color: rgb(217, 217, 254);
+  border: 1px solid #ddd;
+  align-self: flex-start;
+}
+
+.delete-button {
+  background-color: white;
+  border: none;
+  border-radius: 4px;
+  margin: 5px;
+  height: 30px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.delete-button img {
+  width: 20px;
+}
+
+.delete-button:hover {
+  background-color: #d93b5e;
+}
+.send-button img{
+  width: 20px;
+}
+
+/* Media Queries */
+@media (max-width: 600px) {
+  .chat-container {
+    width: 100%;
+    margin: 0;
+    padding: 10px;
+  }
+
+  .chat-header {
+    font-size: 1.25rem;
+  }
+  .App{
+    width: 90%;
+    font-size: 10px;
+  }
+
+  .user-info {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .user-profile-img, .sender-profile-img {
+    width: 30px;
+    height: 30px;
+  }
+
+  .sign-out-button {
+    margin-top: 10px;
+  }
+
+  .message {
+    max-width: 80%;
+  }
+}
