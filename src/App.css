@@ -22,11 +22,12 @@ body{
   margin-top: 50%;
   color: wheat;
   width: 40vw;
+  padding-left: 20px;
   display: flex;
   justify-content: space-between;
 }
 .App button{
-  background: #357abd;
+  background: #427e18;
   color: white;
   font-family: Monne;
   cursor: pointer;
@@ -216,7 +217,7 @@ form{
 /* Media Queries */
 @media (max-width: 600px) {
   .chat-container {
-    width: 100%;
+    width: 80%;
     margin: 0;
     padding: 10px;
   }
@@ -245,5 +246,17 @@ form{
 
   .message {
     max-width: 80%;
+    font-size: 12px;
+  }
+  .delete-button{
+  }
+  .chat-container p{
+    font-size: 12px;
+  }
+  .user-info{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
   }
 }
