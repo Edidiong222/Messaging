@@ -217,7 +217,7 @@ form{
 /* Media Queries */
 @media (max-width: 600px) {
   .chat-container {
-    width: 80%;
+    width: 90%;
     margin: 0;
     padding: 10px;
   }
